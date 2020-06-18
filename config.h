@@ -12,7 +12,8 @@ static const int smartgaps          = 1;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0; 			/*focus on wheel*/
-static const char *fonts[]          = { "Roboto:size=13", "FontAwesome:pixelsize=16:antialias=true:autohint=true"  };
+/* static const char *fonts[]          = { "Roboto:size=13", "FontAwesome:pixelsize=16:antialias=true:autohint=true"  }; */
+static const char font[]            = "Roboto 13";
 static char dmenufont[]             = "Roboto:size=13";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
