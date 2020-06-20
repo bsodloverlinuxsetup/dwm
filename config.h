@@ -40,7 +40,7 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -57,6 +57,8 @@ static const Rule rules[] = {
 	{ "whatsapp-nativefier-d52542",     NULL,       NULL,       	    1 << 8,       0,           0,         0,        -1 },
 	{ "St",       NULL,       NULL,       	    0,            0,           1,         0,        -1 },
 	{ NULL,       NULL,       "Event Tester",   0,            0,           0,         1,        -1 },
+	{ NULL,       NULL,       "spt",   1 << 7,            0,           0,         0,        -1 },
+	{ NULL,       NULL,       "ranger",   1 << 3,            0,           0,         0,        -1 },
 	{ NULL,      "spterm",    NULL,       	    SPTAG(0),     1,           1,         0,        -1 },
 	{ NULL,      "spcalc",    NULL,       	    SPTAG(1),     1,           1,         0,        -1 },
 };
@@ -230,6 +232,40 @@ static Key keys[] = {
 	{ MODKEY|ControlMask, XK_4,		spawn,		SHCMD("bash $HOME/scripts/workspaces/4.sh") },
 	{ MODKEY|ControlMask, XK_8,		spawn,		SHCMD("bash $HOME/scripts/workspaces/8.sh") },
 	{ MODKEY|ControlMask, XK_9,		spawn,		SHCMD("bash $HOME/scripts/workspaces/9.sh") },
+
+/* CUSTOM WORKSPACES WITH MON CHANGE*/
+	{ MODKEY|Mod1Mask,                       XK_1, focusmon,       {.i = +1 } },
+	{ MODKEY|Mod1Mask, XK_1,		spawn,		SHCMD("bash $HOME/scripts/workspaces/1.sh") },
+	{ MODKEY|Mod1Mask,                       XK_2, focusmon,       {.i = +1 } },
+	{ MODKEY|Mod1Mask, XK_2,		spawn,		SHCMD("bash $HOME/scripts/workspaces/2.sh") },
+	{ MODKEY|Mod1Mask,                       XK_3, focusmon,       {.i = +1 } },
+	{ MODKEY|Mod1Mask, XK_3,		spawn,		SHCMD("bash $HOME/scripts/workspaces/3.sh") },
+	{ MODKEY|Mod1Mask,                       XK_4, focusmon,       {.i = +1 } },
+	{ MODKEY|Mod1Mask, XK_4,		spawn,		SHCMD("bash $HOME/scripts/workspaces/4.sh") },
+	{ MODKEY|Mod1Mask,                       XK_8, focusmon,       {.i = +1 } },
+	{ MODKEY|Mod1Mask, XK_8,		spawn,		SHCMD("bash $HOME/scripts/workspaces/8.sh") },
+	{ MODKEY|Mod1Mask,                       XK_9, focusmon,       {.i = +1 } },
+	{ MODKEY|Mod1Mask, XK_9,		spawn,		SHCMD("bash $HOME/scripts/workspaces/9.sh") },
+ /* CHANGE WORKSPACE AND MON */
+	{ ControlMask|Mod1Mask, XK_1,		focusmon,		{.i = +1 } },
+	{ ControlMask|Mod1Mask, XK_1,		spawn,		SHCMD("dwmc viewex 0") },
+	{ ControlMask|Mod1Mask, XK_2,		focusmon,		{.i = +1 } },
+	{ ControlMask|Mod1Mask, XK_2,		spawn,		SHCMD("dwmc viewex 1") },
+	{ ControlMask|Mod1Mask, XK_3,		focusmon,		{.i = +1 } },
+	{ ControlMask|Mod1Mask, XK_3,		spawn,		SHCMD("dwmc viewex 2") },
+	{ ControlMask|Mod1Mask, XK_4,		focusmon,		{.i = +1 } },
+	{ ControlMask|Mod1Mask, XK_4,		spawn,		SHCMD("dwmc viewex 3") },
+	{ ControlMask|Mod1Mask, XK_5,		focusmon,		{.i = +1 } },
+	{ ControlMask|Mod1Mask, XK_5,		spawn,		SHCMD("dwmc viewex 4") },
+	{ ControlMask|Mod1Mask, XK_6,		focusmon,		{.i = +1 } },
+	{ ControlMask|Mod1Mask, XK_6,		spawn,		SHCMD("dwmc viewex 5") },
+	{ ControlMask|Mod1Mask, XK_7,		focusmon,		{.i = +1 } },
+	{ ControlMask|Mod1Mask, XK_7,		spawn,		SHCMD("dwmc viewex 6") },
+	{ ControlMask|Mod1Mask, XK_8,		focusmon,		{.i = +1 } },
+	{ ControlMask|Mod1Mask, XK_8,		spawn,		SHCMD("dwmc viewex 7") },
+	{ ControlMask|Mod1Mask, XK_9,		focusmon,		{.i = +1 } },
+	{ ControlMask|Mod1Mask, XK_9,		spawn,		SHCMD("dwmc viewex 8") },
+
 
 /* MULTI MONITOR KBS */
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
