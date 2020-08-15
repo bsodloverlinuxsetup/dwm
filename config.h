@@ -235,6 +235,11 @@ static Key keys[] = {
 	{ MODKEY|ControlMask, XK_4,		spawn,		SHCMD("bash $HOME/scripts/workspaces/4.sh") },
 	{ MODKEY|ControlMask, XK_8,		spawn,		SHCMD("bash $HOME/scripts/workspaces/8.sh") },
 	{ MODKEY|ControlMask, XK_9,		spawn,		SHCMD("bash $HOME/scripts/workspaces/9.sh") },
+/* youtube stuff kb's */
+
+	{ MODKEY|ShiftMask, XK_p,		spawn,		SHCMD("bash $HOME/scripts/download/yt_play_list.sh") },
+	{ MODKEY, XK_p,		spawn,		SHCMD("bash $HOME/scripts/download/ytpl.sh") },
+	{ MODKEY|ShiftMask, XK_l,		spawn,		SHCMD("bash $HOME/scripts/download/yt_list_vid.sh") },
 
 /* CUSTOM WORKSPACES WITH MON CHANGE*/
 	{ MODKEY|Mod1Mask,                       XK_1, focusmon,       {.i = +1 } },
