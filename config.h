@@ -64,6 +64,7 @@ static const Rule rules[] = {
 	{ NULL,       NULL,       "ranger",   1 << 3,            0,           0,         0,        -1 },
 	{ NULL,      "spterm",    NULL,       	    SPTAG(0),     1,           1,         0,        -1 },
 	{ NULL,      "spcalc",    NULL,       	    SPTAG(1),     1,           1,         0,        -1 },
+	{ "TelegramDesktop",      NULL,    "Media viewer",  1 << 8,     1,           0,         0,        -1 },
 };
 /* layout(s) */
 static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
@@ -215,7 +216,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_Insert,	spawn,		SHCMD("notify-send \"📋 Clipboard contents:\" \"$(xclip -o -selection clipboard)\"") },
 
 	{ MODKEY,			XK_F1,		spawn,		SHCMD("groff -mom /usr/local/share/dwm/larbs.mom -Tpdf | zathura -") },
-	{ MODKEY,			XK_F2,		spawn,		SHCMD("tutorialvids") },
+	{ MODKEY,			XK_F2,		spawn,		SHCMD("bash $HOME/scripts/notify/sensors.sh") },
 	{ MODKEY,			XK_F3,		spawn,		SHCMD("displayselect") },
 	{ MODKEY,			XK_F4,		spawn,		SHCMD("st -e pulsemixer; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,			XK_F5,		xrdb,		{.v = NULL } },
